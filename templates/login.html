@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{%block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+<title>Login Page</title>
+
+{%endblock %}
+
+{%block body %}
+
+<div class='register__form__div'>
+    <div class="myform">
+        <form action='/login' method='POST' class='register__form'>  
+            EMAIL    <input class='myinput' type='email' name='email' id='email' placeholder='Enter Email'> <br>
+            PASSWORD <input class='myinput' type='password' name='pass' id='pass' placeholder='Enter Password'> <br>
+            <input class='btn btn-primary' type='submit' name='submit' id='submit' value='Login'>
+        </form>
+    </div>
+    <div class = 'random__image'>
+
+        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkZX9SQlCfYHDcPHlHINytWgllS-d_GeWGXQ&usqp=CAU' alt='there is an image'>
+    </div>
+</div>
+
+{%endblock%}

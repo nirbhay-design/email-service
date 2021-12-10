@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/readmail.css') }}">
+<title>ReadMail Page</title>
+
+{%endblock %}
+
+{%block body %}
+
+<div class='register__form__div'>
+    
+    <input type='text' class='myinput' value = "from: <{{mailinfo.from_id}}>" readonly > <hr> 
+    <input type='text' class='myinput' value= "Re: {{mailinfo.subj}}" readonly> <hr>
+    <textarea readonly class='mail__textarea'>{{mailinfo.content}}</textarea>
+</div>
+
+{%endblock%}

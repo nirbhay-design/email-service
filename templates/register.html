@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{%block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/register.css') }}">
+<title>Register Page</title>
+
+{%endblock %}
+
+{%block body %}
+
+<div class='register__form__div'>
+    <div class="myform">
+        <form action='/register' method='POST' class='register__form'>  
+            First Name: <input class='myinput' type="text" name='firstname' id='firstname' placeholder="Enter First Name"> <br>
+            Last Name: <input class='myinput' type="text" name='lastname' id='lastname' placeholder="Enter Last Name"> <br>
+            Email: <input class='myinput' type='email' name='email' id='email' placeholder='Enter Email'> <br>
+            Password: <input class='myinput' type='password' name='pass' id='pass' placeholder='Enter Password'> <br>
+            Country: <input class='myinput' type='text' name='country' id='country' placeholder='Enter your country'> <br>
+            Age: <input class='myinput' type='number' name='age' id='age' placeholder='Enter your age'> <br>
+            <input class='btn btn-primary' type='submit' name='submit' id='submit' value='Register'>
+        </form>
+    </div>
+    <div class = 'random__image'>
+
+        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkZX9SQlCfYHDcPHlHINytWgllS-d_GeWGXQ&usqp=CAU' alt='there is an image'>
+    </div>
+</div>
+
+{%endblock%}

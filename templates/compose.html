@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{%block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/compose.css') }}">
+<title>Compose Page</title>
+
+{%endblock %}
+
+
+{%block body %}
+<div class='compose__form__div'>
+    <div class="myform">
+        <form action='/login/{{aidi}}/{{useremail}}/compose' method='POST' class='compose__form'>  
+            <input class='myinput' type="text" name='remail' id='remail' placeholder="Receiver Email"> <hr>
+            <input class='myinput' type="text" name='subject' id='subject' placeholder="Subject"> <hr>
+            <textarea id='content__area' name='content__area' placeholder='content'></textarea> <hr>
+            <input class='btn btn-primary' type='submit' name='submit' id='submit' value='Send'>
+        </form>
+    </div>
+</div>
+
+{%endblock %}

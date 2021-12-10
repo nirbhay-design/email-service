@@ -1,0 +1,16 @@
+.home__div{
+    text-align:center;
+    margin-top:20vh;
+}
+
+.btn-primary:hover {
+    background-color:white;
+    color:#0D6DFD;
+}
+
+.home__image{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+}

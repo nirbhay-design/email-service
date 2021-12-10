@@ -1,0 +1,110 @@
+body{
+    background-color: rgb(241, 241, 241);
+
+}
+
+.register__form__div{
+    display:flex;
+    flex-direction:row;
+    background-color:white;
+    border:2px solid white;
+    box-shadow: 5px 5px 3px 1px rgba(0,0,0,0.4);
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10vh;
+    padding:10px;
+    border-radius:10px;
+    height:70vh;
+    width:70%;
+    
+    /* height:75vh;
+    width:70%; */
+}
+
+.myform{
+    flex:0.8;
+    
+}
+
+.register__form{
+    display:flex;
+    align-items:center;
+    justify-content:right;
+    flex-direction:column;
+    /* text-align:center; */
+    padding:10px;
+    font-size:large;
+    font-weight:bold;
+    margin-top:15%;
+
+}
+
+/* .register__form > input{
+    font-size:large;
+    margin:15px;
+    border:none;
+    outline-width: 0;
+    border-bottom:3px solid purple;
+}
+
+.register__form > input:hover{
+    border-bottom:3px solid green;
+} */
+
+.myinput{
+    font-size:large;
+    margin:15px;
+    border:none;
+    outline-width: 0;
+    border-bottom:3px solid purple;
+}
+
+.myinput:hover{
+    border-bottom:3px solid green;
+}
+
+.random__image{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width:280px;
+    height:280px;
+    /* margin-top:10%; */
+}
+
+
+
+@media only screen and (max-width: 1090px) {
+    .register__form__div{
+        height:90vh;
+        width:80%;
+    }
+
+}
+@media only screen and (max-width: 700px) {
+    .register__form__div{
+        height:80vh;
+        width:80%;
+    }
+    .random__image{
+        display:none;
+    }
+    .myform{
+        flex:1;
+    }
+}
+
+#submit{
+    font-size:17px;
+    margin-top:5px;
+}
+
+@media only screen and (max-height: 700px) {
+    .register__form__div{
+        height:100%;
+        width:80%;
+    }
+
+}

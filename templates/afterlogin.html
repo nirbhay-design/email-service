@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{%block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/afterlogin.css') }}">
+<title>User Page</title>
+
+{%endblock %}
+
+
+{%block body %}
+<div class='overall__div'>
+    <div class='navbar__user'>
+        <div class='collected__buttons'>
+            <a href='/login/{{userid}}/{{useremail}}/compose'><button class='btn btn-primary'>Compose</button></a>
+            <a href='/login/{{userid}}/{{useremail}}/inbox'><button class='btn btn-primary'>Inbox</button></a>
+            <a href='/login/{{userid}}/{{useremail}}/trash'><button class='btn btn-primary'>Trash</button></a>
+            <a href='/login/{{userid}}/{{useremail}}/sent'><button class='btn btn-primary'>Sent</button></a>
+        </div>
+        <div class='greet__user'>
+            <h2 class='user__email'> {{useremail}} </h2>
+        </div>
+        <div class='logout__area'>
+            <a href='/'><button class='btn btn-primary btn-danger'>Logout</button></a>
+        </div>
+    </div>
+    <div class='mails__area'>
+        {% if listlen == 0 %}
+            <h3 class='text-center my-3'> Nothing to see here yet <h2>
+        {%else %}
+            {% if mailtype == 0 %}
+                {% for mails in inbox_mails %}
+                    
+                        <div class='individual__mails' onclick="location.href='/login/{{userid}}/{{useremail}}/inbox/read/{{mails.aid}}';">
+                            <div class='mail__details'>
+                                <h5>{{mails.from_id}}</h5>
+                                <h5 id='h115'>Re: {{mails.subj}}</h5>
+                                <h6>{{mails.times.strftime('%B %d %Y - %H:%M:%S')}} </h6>
+                            </div>
+                            <div class='necessary__buttons'>
+                                <a href='/login/{{userid}}/{{useremail}}/delete/{{mails.aid}}'><button class='btn btn-danger'>Delete</button></a>
+                            </div>
+                        </div>
+                    
+                    <hr>
+                {% endfor %}
+            {%elif mailtype == 1 %}
+                {% for mails in inbox_mails %}
+                    
+                        <div class='individual__mails' onclick="location.href='/login/{{userid}}/{{useremail}}/trash/read/{{mails.aid}}';">
+                            <div class='mail__details'>
+                                <h5>{{mails.from_id}}</h5>
+                                <h5 id='h115'>Re: {{mails.subj}}</h5>
+                                <h6>{{mails.times.strftime('%B %d %Y - %H:%M:%S')}} </h6>
+                            </div>
+                        </div> 
+                    
+                    <hr>
+                {%endfor%}
+            {% else %}
+                {% for mails in inbox_mails %}
+                        
+                    <div class='individual__mails' onclick="location.href='/login/{{userid}}/{{useremail}}/sent/read/{{mails.aid}}';">
+                        <div class='mail__details'>
+                            <h5>to: {{mails.to_id}}</h5>
+                            <h5 id='h115'>Re: {{mails.subj}}</h5>
+                            <h6>{{mails.times.strftime('%B %d %Y - %H:%M:%S')}} </h6>
+                        </div>
+                    </div> 
+                
+                    <hr>
+                {%endfor%}        
+            {%endif%}
+        {%endif%}
+    </div>
+
+</div>
+{%endblock %}

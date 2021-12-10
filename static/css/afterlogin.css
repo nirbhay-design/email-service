@@ -1,0 +1,56 @@
+.navbar__user{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px;
+    background-color:#222222;
+}
+
+.user__email{
+    color:white;
+}
+
+.btn{
+    font-size:17px;
+}
+
+.necessary__buttons{
+    /* display:flex; */
+    padding:5px;
+}
+
+/* .read__mails{
+    text-decoration:none;
+} */
+
+.individual__mails:hover{
+    box-shadow:3px 3px 3px 1px rgba(0,0,0,0.4);
+    cursor:grab;    
+}
+
+.mail__details{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    /* flex:0.95; */
+    padding:5px;
+    color:black;
+    
+}
+
+hr{
+    margin:0;
+}
+
+.individual__mails{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:5px;
+}
+
+h5{
+    font-size:17px;
+    margin-right:50px;
+}
+

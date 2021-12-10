@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(241, 241, 241);
+
+}
+
+.register__form__div{
+    display:flex;
+    flex-direction:column;
+    background-color:white;
+    border:2px solid white;
+    box-shadow: 5px 5px 3px 1px rgba(0,0,0,0.4);
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10vh;
+    padding:10px;
+    border-radius:10px;
+    height:90vh;
+    width:70%;
+    margin-bottom:3vh;
+    
+    /* height:75vh;
+    width:70%; */
+}
+
+.mail__textarea{
+    height:100%;
+    width:100%;
+    border:none;
+    outline-width: 0;
+    padding:5px;
+}
+
+.myinput{
+    /* height:100%; */
+    width:100%;
+    border:none;
+    outline-width: 0;
+    font-size:17px;
+    padding:5px;
+}
+
+@media only screen and (max-width: 1090px) {
+    .register__form__div{
+        height:90vh;
+        width:80%;
+    }
+
+}
+
+@media only screen and (max-height: 700px) {
+    .register__form__div{
+        height:100%;
+        width:80%;
+    }
+
+}
